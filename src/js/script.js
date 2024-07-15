@@ -5,13 +5,13 @@ const display = document.querySelector('.display'),
     equals = document.querySelector('#equals'),
     clear = document.querySelector('#clear'),
     backspace = document.querySelector('#backspace'),
-    backAction = document.querySelector('#back_action');
+    backAction = document.querySelector('#back_action'),
+    percent = document.querySelector('#percent');
+
+const arithmetic = document.querySelectorAll('.arithmetic');
 
 let operation = [];
 let filteredArr = [];
-
-
-const arithmetic = document.querySelectorAll('.arithmetic');
 
 btns.addEventListener('click', (event) => {
 
@@ -45,16 +45,35 @@ clear.addEventListener('click', (event) => {
 // Действия, после нажатие на равно "="
 equals.addEventListener('click', (event) => {
     let expression = display.innerHTML;
-    expression = expression.replace(/(\d+)%/g, (match, p1) => {
-        return `${p1}/100`;
-    });
+
+    // Работа с процентами
+    for (let i = 0; i < expression.length; i++) {
+        if (expression[i] == "%") {
+            expression = `${expression.trim().slice(0, -1)} / 100`;
+        } else if (['+', '-', '*', '/'].includes(expression[i]) && expression[expression.length - 1] == "%") {
+            let numberForProcent = expression.slice(0, i);
+            let numberAfterProcent = expression.slice(i + 2, -1);
+            let procentNumber = numberForProcent / 100 * numberAfterProcent;
+
+            expression = `${numberForProcent}${expression[i]} ${procentNumber}`;
+            console.log(numberAfterProcent)
+            break
+            
+        } else {
+            console.log(false)
+
+        }
+    }
 
     display.innerHTML = eval(expression);
+
+    // добавление примера в массив
     operation.push(`${expression} = ${eval(expression)}`);
 
+    // проверка и удаление не нужных примеров в массив
     operation.forEach((item, index, arr) => {
         for (let i = 0; i < item.length; i++) {
-            if (item.includes('+') || item.includes('-') || item.includes('*') || item.includes('/')) {
+            if (item.includes('%') || item.includes('+') || item.includes('-') || item.includes('*') || item.includes('/')) {
             } else {
                 delete arr[index]
             }
@@ -63,10 +82,10 @@ equals.addEventListener('click', (event) => {
     console.log(operation)
 });
 
-
 // Все операции, которые были раннее
 backAction.addEventListener('click', () => {
 
+    // сортировка массива operation с пустыми элементами
     for (let i = 0; i < operation.length; i++) {
         if (operation[i]) {
             filteredArr.push(operation[i]);
