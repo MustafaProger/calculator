@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link type="image/x-icon" href="https://cdn2.iconfinder.com/data/icons/ios7-inspired-mac-icon-set/512/Calculator_512.png" rel="shortcut icon">
     <title>Calculator</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -15,11 +16,11 @@
             <div class="buttons">
                 <button class="btn clear" id="clear">C</button>
                 <button class="btn number" id="percent">%</button>
-                <button class="btn" id="backspace"><svg fill="#324857" xmlns="http://www.w3.org/2000/svg" id="Layer_1" height="24"
-                        viewBox="0 0 24 24" width="22" data-name="Layer 1">
+                <button class="btn" id="backspace"><svg fill="#324857" xmlns="http://www.w3.org/2000/svg" id="Layer_1"
+                        height="24" viewBox="0 0 24 24" width="22" data-name="Layer 1">
                         <path
                             d="m19 2h-9.044a4.966 4.966 0 0 0 -3.946 1.931l-5.8 7.455a1 1 0 0 0 0 1.228l5.8 7.455a4.966 4.966 0 0 0 3.946 1.931h9.044a5.006 5.006 0 0 0 5-5v-10a5.006 5.006 0 0 0 -5-5zm3 15a3 3 0 0 1 -3 3h-9.044a2.979 2.979 0 0 1 -2.368-1.158l-5.321-6.842 5.321-6.842a2.979 2.979 0 0 1 2.368-1.158h9.044a3 3 0 0 1 3 3zm-4.793-6.793-1.793 1.793 1.793 1.793a1 1 0 1 1 -1.414 1.414l-1.793-1.793-1.793 1.793a1 1 0 0 1 -1.414-1.414l1.793-1.793-1.793-1.793a1 1 0 0 1 1.414-1.414l1.793 1.793 1.793-1.793a1 1 0 0 1 1.414 1.414z" />
-                        </svg>
+                    </svg>
                 </button>
                 <button class="btn arithmetic division" id="division">/</button>
                 <button class="btn number">7</button>
@@ -36,14 +37,21 @@
                 <button class="btn arithmetic plus" id="plus">+</button>
                 <button class="btn number point">.</button>
                 <button class="btn number">0</button>
-                <button class="btn" id="back_action"><svg fill="#324857" focusable="false" xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 24 24">
+                <button class="btn" id="back_action"><svg fill="#324857" focusable="false"
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                         <path
                             d="M13 3a9 9 0 0 0-9 9H1l3.89 3.89.07.14L9 12H6c0-3.87 3.13-7 7-7s7 3.13 7 7-3.13 7-7 7c-1.93 0-3.68-.79-4.94-2.06l-1.42 1.42A8.954 8.954 0 0 0 13 21a9 9 0 0 0 0-18zm-1 5v5l4.28 2.54.72-1.21-3.5-2.08V8H12z">
                         </path>
                     </svg>
                 </button>
                 <button class="btn equals" id="equals">=</button>
+            </div>
+            <div class="calculator__operations">
+                <div class="container__operations">
+                    <div class="page-down"></div>
+                    <ol class="list__operations">
+                    </ol>
+                </div>
             </div>
         </div>
     </div>
