@@ -1,13 +1,14 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: Montserrat, sans-serif;
     outline: 0;
+    font-family: Montserrat, sans-serif;
 }
 
-html, body {
-    touch-action: manipulation; 
-  }
+html,
+body {
+    touch-action: manipulation;
+}
 
 .container {
     display: flex;
@@ -81,5 +82,28 @@ html, body {
         width: 30px;
         height: 30px;
         padding-top: 4px;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .container {
+        background: #2E2F3A;
+        color: white;
+    }
+
+    .calculator,
+    .btn {
+        background: #4f5165;
+    }
+
+    .btn {
+        color: #b9bdea;
+    }
+    .btn:hover {
+        background-color: #61647c;
+    }
+
+    #backspace svg, #back_action svg {
+        fill: #b9bdea
     }
 }
