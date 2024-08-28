@@ -38,7 +38,7 @@ Here's how you can perform a simple calculation:
 
 The result will be displayed as `8`.
 
-## Code Overview
+## 💻 Code Overview
 
 The project structure is as follows:
 
@@ -46,7 +46,7 @@ The project structure is as follows:
 - `style.css` - The CSS file for styling the calculator.
 - `script.js` - The JavaScript file that contains the logic for the calculator's operations.
 
-### 💻 JavaScript Functionality
+### JavaScript Functionality
 
 The core logic of the calculator is handled in the `script.js` file. It includes functions for:
 
