@@ -1,4 +1,4 @@
-# Simple Calculator
+# 📱 Simple Calculator
 
 This repository contains a simple calculator implemented in JavaScript, HTML, and CSS. The calculator allows basic arithmetic operations like addition, subtraction, multiplication, and division.
 
