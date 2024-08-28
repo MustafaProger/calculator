@@ -57,7 +57,3 @@ The core logic of the calculator is handled in the `script.js` file. It includes
 ## Contributing
 
 If you'd like to contribute to this project, feel free to fork the repository and submit a pull request. Any improvements, bug fixes, or new features are welcome!
-
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
